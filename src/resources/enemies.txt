@@ -1,0 +1,124 @@
+# Enemy data file
+# Format:
+# id: unique_id_string
+# name: Enemy Name String
+# maxHP: integer
+# baseAccuracy: integer
+# baseDodge: integer
+# armor: integer
+# initialShield: integer
+# regenPerSecond: integer
+# spell: name,damage,cooldownSeconds,ignoresArmor(true/false),ignoresShield(true/false)
+# spell: name,damage,cooldownSeconds,ignoresArmor(true/false),ignoresShield(true/false)
+# --- (separator for next enemy)
+
+id: floor01_humble_goblin
+name: Humble Goblin
+maxHP: 25
+baseAccuracy: 65
+baseDodge: 10
+armor: 0
+initialShield: 0
+regenPerSecond: 0
+spell: Stab,1,2.0,false,false
+spell: Slice,2,3.0,false,false
+---
+id: floor02_skeleton
+name: Skeleton
+maxHP: 45
+baseAccuracy: 67
+baseDodge: 12
+armor: 0
+initialShield: 0
+regenPerSecond: 0
+spell: Rusty Dagger,1,2.5,false,false
+spell: Femur Smash,2,4.0,false,false
+---
+id: floor03_imp
+name: Imp
+maxHP: 55
+baseAccuracy: 69
+baseDodge: 13
+armor: 0
+initialShield: 0
+regenPerSecond: 0
+spell: Glare,1,2.0,false,false
+spell: Ember,1,2.5,true,false 
+---
+id: floor04_air_elemental
+name: Air Elemental
+maxHP: 75
+baseAccuracy: 71
+baseDodge: 15
+armor: 0
+initialShield: 30
+regenPerSecond: 0
+spell: Gust,1,1.25,false,false
+spell: Shear,3,4.5,false,false
+---
+id: floor05_salamander
+name: Salamander
+maxHP: 110
+baseAccuracy: 73
+baseDodge: 16
+armor: 2
+initialShield: 0
+regenPerSecond: 1
+spell: Wicked Maw,3,4.0,false,false
+spell: Foul Breath,2,3.5,true,true
+---
+id: floor06_orcish_hunter
+name: Orcish Hunter
+maxHP: 125
+baseAccuracy: 75
+baseDodge: 18
+armor: 3
+initialShield: 0
+regenPerSecond: 0
+spell: Short Sword,2,2.5,false,false
+spell: Javelin,4,4.0,false,false
+---
+id: floor07_zombie
+name: Zombie
+maxHP: 145
+baseAccuracy: 77
+baseDodge: 19
+armor: 0
+initialShield: 0
+regenPerSecond: 0
+spell: Chomp,3,3.0,false,false
+spell: Bash,5,4.5,false,false
+---
+id: floor08_quasit
+name: Quasit
+maxHP: 155
+baseAccuracy: 79
+baseDodge: 21
+armor: 0
+initialShield: 0
+regenPerSecond: 2
+spell: Dirty Nail,3,2.5,false,false
+spell: Piercing Gaze,3,2.5,true,false
+---
+id: floor09_water_elemental
+name: Water Elemental
+maxHP: 170
+baseAccuracy: 81
+baseDodge: 22
+armor: 0
+initialShield: 80
+regenPerSecond: 0
+spell: Clobber,4,2.5,false,false
+spell: Surge,4,3.0,true,false
+---
+id: floor10_swamp_dragon
+name: Swamp Dragon
+maxHP: 180
+baseAccuracy: 83
+baseDodge: 24
+armor: 3
+initialShield: 0
+regenPerSecond: 3
+spell: Rip,4,2.5,false,false
+spell: Acrid Breath,4,4.5,true,true
+---

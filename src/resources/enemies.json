@@ -1,0 +1,282 @@
+[
+  {
+    "id": "floor01_humble_goblin",
+    "name": "Humble Goblin",
+    "maxHP": 25,
+    "baseAccuracy": 65,
+    "baseDodge": 10,
+    "armor": 0,
+    "initialShield": 0,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Stab",
+        "damage": 1,
+        "cooldownSeconds": 2.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Slice",
+        "damage": 2,
+        "cooldownSeconds": 3.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor02_skeleton",
+    "name": "Skeleton",
+    "maxHP": 45,
+    "baseAccuracy": 67,
+    "baseDodge": 12,
+    "armor": 0,
+    "initialShield": 0,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Rusty Dagger",
+        "damage": 1,
+        "cooldownSeconds": 2.5,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Femur Smash",
+        "damage": 2,
+        "cooldownSeconds": 4.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor03_imp",
+    "name": "Imp",
+    "maxHP": 55,
+    "baseAccuracy": 69,
+    "baseDodge": 13,
+    "armor": 0,
+    "initialShield": 0,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Glare",
+        "damage": 1,
+        "cooldownSeconds": 2.0,
+        "damageType": "PHYSICAL", 
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Ember",
+        "damage": 1,
+        "cooldownSeconds": 2.5,
+        "damageType": "FIRE",
+        "ignoresArmor": true,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor04_air_elemental",
+    "name": "Air Elemental",
+    "maxHP": 75,
+    "baseAccuracy": 71,
+    "baseDodge": 15,
+    "armor": 0,
+    "initialShield": 30,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Gust",
+        "damage": 1,
+        "cooldownSeconds": 1.25,
+        "damageType": "PHYSICAL", // Or a new "AIR" type if you add it
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Shear",
+        "damage": 3,
+        "cooldownSeconds": 4.5,
+        "damageType": "PHYSICAL", // Or "AIR"
+        "ignoresArmor": false,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor05_salamander",
+    "name": "Salamander",
+    "maxHP": 110,
+    "baseAccuracy": 73,
+    "baseDodge": 16,
+    "armor": 2,
+    "initialShield": 0,
+    "regenPerSecond": 1,
+    "spells": [
+      {
+        "name": "Wicked Maw",
+        "damage": 3,
+        "cooldownSeconds": 4.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Foul Breath",
+        "damage": 2,
+        "cooldownSeconds": 3.5,
+        "damageType": "ACID", // Assuming an "ACID" DamageType
+        "ignoresArmor": true,
+        "ignoresShield": true
+      }
+    ]
+  },
+  {
+    "id": "floor06_orcish_hunter",
+    "name": "Orcish Hunter",
+    "maxHP": 125,
+    "baseAccuracy": 75,
+    "baseDodge": 18,
+    "armor": 3,
+    "initialShield": 0,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Short Sword",
+        "damage": 2,
+        "cooldownSeconds": 2.5,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Javelin",
+        "damage": 4,
+        "cooldownSeconds": 4.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor07_zombie",
+    "name": "Zombie",
+    "maxHP": 145,
+    "baseAccuracy": 77,
+    "baseDodge": 19,
+    "armor": 0,
+    "initialShield": 0,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Chomp",
+        "damage": 3,
+        "cooldownSeconds": 3.0,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Bash",
+        "damage": 5,
+        "cooldownSeconds": 4.5,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor08_quasit",
+    "name": "Quasit",
+    "maxHP": 155,
+    "baseAccuracy": 79,
+    "baseDodge": 21,
+    "armor": 0,
+    "initialShield": 0,
+    "regenPerSecond": 2,
+    "spells": [
+      {
+        "name": "Dirty Nail",
+        "damage": 3,
+        "cooldownSeconds": 2.5,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Piercing Gaze",
+        "damage": 3,
+        "cooldownSeconds": 2.5,
+        "damageType": "PSYCHIC", // Assuming a "PSYCHIC" DamageType
+        "ignoresArmor": true,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor09_water_elemental",
+    "name": "Water Elemental",
+    "maxHP": 170,
+    "baseAccuracy": 81,
+    "baseDodge": 22,
+    "armor": 0,
+    "initialShield": 80,
+    "regenPerSecond": 0,
+    "spells": [
+      {
+        "name": "Clobber",
+        "damage": 4,
+        "cooldownSeconds": 2.5,
+        "damageType": "PHYSICAL", // Or "WATER"
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Surge",
+        "damage": 4,
+        "cooldownSeconds": 3.0,
+        "damageType": "WATER", // Assuming a "WATER" DamageType
+        "ignoresArmor": true,
+        "ignoresShield": false
+      }
+    ]
+  },
+  {
+    "id": "floor10_swamp_dragon",
+    "name": "Swamp Dragon",
+    "maxHP": 180,
+    "baseAccuracy": 83,
+    "baseDodge": 24,
+    "armor": 3,
+    "initialShield": 0,
+    "regenPerSecond": 3,
+    "spells": [
+      {
+        "name": "Rip",
+        "damage": 4,
+        "cooldownSeconds": 2.5,
+        "damageType": "PHYSICAL",
+        "ignoresArmor": false,
+        "ignoresShield": false
+      },
+      {
+        "name": "Acrid Breath",
+        "damage": 4,
+        "cooldownSeconds": 4.5,
+        "damageType": "ACID", // Assuming an "ACID" DamageType
+        "ignoresArmor": true,
+        "ignoresShield": true
+      }
+    ]
+  }
+]

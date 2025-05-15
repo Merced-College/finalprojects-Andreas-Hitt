@@ -1,0 +1,271 @@
+# Player Base Spell Templates Data File
+# Format:
+# id: unique_id_string
+# name: Spell Name String
+# scalingAttribute: PRIMARY_ATTRIBUTE_ENUM_STRING (e.g., DEXTERITY)
+# coreEffect.type: CORE_EFFECT_TYPE_ENUM_STRING (e.g., DAMAGE)
+# coreEffect.baseValue: double
+# coreEffect.damageType: DAMAGE_TYPE_ENUM_STRING (optional, if type is DAMAGE)
+# coreEffect.healingType: HEALING_TYPE_ENUM_STRING (optional, if type is HEALING)
+# coreEffect.dotType: string (optional, if type is APPLY_DOT, e.g., ENTROPY_POISON)
+# coreEffect.dealsNoInitialDamage: boolean (optional, default false)
+# coreEffect.stacking: boolean (optional, for DOTs, default false)
+# cooldownRange.minSeconds: double
+# cooldownRange.maxSeconds: double
+# inherentProperties.dealsDoubleDamageToShields: boolean (optional, default false)
+# inherentProperties.ignoresArmor: boolean (optional, default false)
+# inherentProperties.ignoresShield: boolean (optional, default false)
+# inherentProperties.alwaysHits: boolean (optional, default false)
+# inherentProperties.accuracyBonus: integer (optional, default 0)
+# inherentProperties.onHitEffect: string_identifier (optional, e.g., REDUCE_ENEMY_ARMOR_1_FLAT_STACKING)
+# --- (separator for next spell template)
+
+id: base_hungering_arrow
+name: Hungering Arrow
+scalingAttribute: DEXTERITY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: ASTRAL
+cooldownRange.minSeconds: 4.5
+cooldownRange.maxSeconds: 6.5
+inherentProperties.dealsDoubleDamageToShields: true
+inherentProperties.accuracyBonus: 30
+---
+id: base_acid_blob
+name: Acid Blob
+scalingAttribute: FORTITUDE
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 2
+coreEffect.damageType: ACID
+cooldownRange.minSeconds: 2.0
+cooldownRange.maxSeconds: 3.5
+inherentProperties.ignoresArmor: true
+---
+id: base_castigation
+name: Castigation
+scalingAttribute: PIETY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: HOLY
+cooldownRange.minSeconds: 2.5
+cooldownRange.maxSeconds: 4.0
+inherentProperties.onHitEffect: REDUCE_ENEMY_ACCURACY_1_FLAT_STACKING
+---
+id: base_shout
+name: Shout
+scalingAttribute: CHARM
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 5
+coreEffect.damageType: SONIC
+cooldownRange.minSeconds: 3.5
+cooldownRange.maxSeconds: 5.0
+inherentProperties.ignoresArmor: true
+---
+id: base_protect
+name: Protect
+scalingAttribute: MIND
+coreEffect.type: SHIELD_APPLICATION
+coreEffect.baseValue: 2
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.5
+---
+id: base_spark
+name: Spark
+scalingAttribute: AGILITY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 1
+coreEffect.damageType: ARCANE
+cooldownRange.minSeconds: 1.5
+cooldownRange.maxSeconds: 3.0
+---
+id: base_cheer
+name: Cheer
+scalingAttribute: CHARM
+coreEffect.type: HEALING
+coreEffect.baseValue: 4
+coreEffect.healingType: CHARM_HEALING
+cooldownRange.minSeconds: 3.5
+cooldownRange.maxSeconds: 5.0
+---
+id: base_minor_heal
+name: Minor Heal
+scalingAttribute: PIETY
+coreEffect.type: HEALING
+coreEffect.baseValue: 3
+coreEffect.healingType: PIETY_HEALING
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.5
+---
+id: base_arcane_bolt
+name: Arcane Bolt
+scalingAttribute: AGILITY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: ARCANE
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.5
+inherentProperties.dealsDoubleDamageToShields: true
+---
+id: base_telekinesis
+name: Telekinesis
+scalingAttribute: MIND
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 1
+coreEffect.damageType: PSYCHIC
+cooldownRange.minSeconds: 1.5
+cooldownRange.maxSeconds: 2.5
+inherentProperties.ignoresArmor: true
+inherentProperties.ignoresShield: true
+---
+id: base_balm
+name: Balm
+scalingAttribute: WISDOM
+coreEffect.type: HEALING
+coreEffect.baseValue: 2
+coreEffect.healingType: WISDOM_HEALING
+cooldownRange.minSeconds: 2.0
+cooldownRange.maxSeconds: 3.0
+---
+id: base_crumble
+name: Crumble
+scalingAttribute: CUNNING
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 2
+coreEffect.damageType: ENTROPY
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.5
+inherentProperties.ignoresArmor: true
+inherentProperties.ignoresShield: true
+inherentProperties.alwaysHits: true
+---
+id: base_singe
+name: Singe
+scalingAttribute: INTELLECT
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: FIRE
+cooldownRange.minSeconds: 2.5
+cooldownRange.maxSeconds: 4.0
+---
+id: base_green_brew
+name: Green Brew
+scalingAttribute: FORTITUDE
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 1
+coreEffect.damageType: ACID
+cooldownRange.minSeconds: 4.0
+cooldownRange.maxSeconds: 5.5
+inherentProperties.onHitEffect: REDUCE_ENEMY_ARMOR_1_FLAT_STACKING
+---
+id: base_chill
+name: Chill
+scalingAttribute: INTELLECT
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 2
+coreEffect.damageType: COLD
+cooldownRange.minSeconds: 2.5
+cooldownRange.maxSeconds: 3.5
+inherentProperties.onHitEffect: REDUCE_ENEMY_DODGE_1_FLAT_STACKING
+---
+id: base_nightfall
+name: Nightfall
+scalingAttribute: MALICE
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 7
+coreEffect.damageType: DARK
+cooldownRange.minSeconds: 5.0
+cooldownRange.maxSeconds: 7.0
+---
+id: base_infection
+name: Infection
+scalingAttribute: CUNNING
+coreEffect.type: APPLY_DOT
+coreEffect.dotType: ENTROPY_POISON
+coreEffect.baseValue: 1 
+coreEffect.stacking: true
+coreEffect.dealsNoInitialDamage: true
+cooldownRange.minSeconds: 7.0
+cooldownRange.maxSeconds: 9.0
+inherentProperties.ignoresArmor: true
+inherentProperties.ignoresShield: true
+inherentProperties.alwaysHits: true
+---
+id: base_illusory_dagger
+name: Illusory Dagger
+scalingAttribute: DEXTERITY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: ASTRAL
+cooldownRange.minSeconds: 2.0
+cooldownRange.maxSeconds: 3.5
+inherentProperties.ignoresArmor: true
+---
+id: base_scream
+name: Scream
+scalingAttribute: CHARM
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 6
+coreEffect.damageType: SONIC
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.0
+inherentProperties.ignoresArmor: true
+---
+id: base_frost
+name: Frost
+scalingAttribute: INTELLECT
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 4
+coreEffect.damageType: COLD
+cooldownRange.minSeconds: 2.5
+cooldownRange.maxSeconds: 3.5
+inherentProperties.onHitEffect: REDUCE_ENEMY_DODGE_1_FLAT_STACKING
+---
+id: base_scorch
+name: Scorch
+scalingAttribute: INTELLECT
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 5
+coreEffect.damageType: FIRE
+cooldownRange.minSeconds: 2.5
+cooldownRange.maxSeconds: 3.5
+inherentProperties.accuracyBonus: 3
+---
+id: base_weakness_rune
+name: Weakness Rune
+scalingAttribute: MALICE
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 2
+coreEffect.damageType: DARK
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.0
+inherentProperties.onHitEffect: REDUCE_ENEMY_REGEN_1_FLAT_STACKING
+---
+id: base_jolt
+name: Jolt
+scalingAttribute: WISDOM
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 2
+coreEffect.damageType: LIGHTNING
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.5
+inherentProperties.onHitEffect: REDUCE_ENEMY_DODGE_1_FLAT_STACKING
+---
+id: base_lightning_strike
+name: Lightning Strike
+scalingAttribute: WISDOM
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 5
+coreEffect.damageType: LIGHTNING
+cooldownRange.minSeconds: 3.0
+cooldownRange.maxSeconds: 4.0
+inherentProperties.onHitEffect: REDUCE_ENEMY_DODGE_1_FLAT_STACKING
+---
+id: base_plasma_bolt
+name: Plasma Bolt
+scalingAttribute: AGILITY
+coreEffect.type: DAMAGE
+coreEffect.baseValue: 3
+coreEffect.damageType: ARCANE
+cooldownRange.minSeconds: 1.5
+cooldownRange.maxSeconds: 2.5
+---

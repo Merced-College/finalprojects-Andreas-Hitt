@@ -1,0 +1,166 @@
+# Base Enchant Definitions Data File
+# Format:
+# enchantID: UNIQUE_ENCHANT_ID_STRING
+# descriptionTemplate: "+{value} Agility"
+# effectType: ENCHANT_EFFECT_TYPE_ENUM_STRING
+# targetKey: TARGET_PARAMETER_ENUM_STRING or specific type string (e.g., AGILITY, FIRE_DAMAGE)
+# trueBaseValue: double
+# maxTotalValueAtFloor50: double
+# --- (separator for next enchant)
+
+enchantID: ENCH_ADD_AGILITY
+descriptionTemplate: "+{value} Agility"
+effectType: PLAYER_PRIMARY_STAT_ADD_FLAT
+targetKey: AGILITY
+trueBaseValue: 2
+maxTotalValueAtFloor50: 15
+---
+enchantID: ENCH_ADD_CHARM
+descriptionTemplate: "+{value} Charm"
+effectType: PLAYER_PRIMARY_STAT_ADD_FLAT
+targetKey: CHARM
+trueBaseValue: 2
+maxTotalValueAtFloor50: 15
+---
+# ... (Continue for CUNNING, DEXTERITY, FORTITUDE, INTELLECT, MALICE, MIND, PIETY, WISDOM)
+enchantID: ENCH_ADD_WISDOM
+descriptionTemplate: "+{value} Wisdom"
+effectType: PLAYER_PRIMARY_STAT_ADD_FLAT
+targetKey: WISDOM
+trueBaseValue: 2
+maxTotalValueAtFloor50: 15
+---
+enchantID: ENCH_ADD_MAX_HP
+descriptionTemplate: "+{value} Max HP"
+effectType: PLAYER_SECONDARY_STAT_ADD_FLAT
+targetKey: MAX_HP
+trueBaseValue: 5
+maxTotalValueAtFloor50: 350
+---
+enchantID: ENCH_ADD_ARMOR
+descriptionTemplate: "+{value} Armor"
+effectType: PLAYER_SECONDARY_STAT_ADD_FLAT
+targetKey: ARMOR
+trueBaseValue: 1
+maxTotalValueAtFloor50: 26
+---
+enchantID: ENCH_ADD_HP_REGEN_PER_SEC
+descriptionTemplate: "+{value} HP Regen/sec"
+effectType: PLAYER_SECONDARY_STAT_ADD_FLAT
+targetKey: HP_REGEN_PER_SEC
+trueBaseValue: 1
+maxTotalValueAtFloor50: 26
+---
+# (PLAYER_SECONDARY_STAT_ADD_PERCENT, TBV=10, MTV@F50=35)
+enchantID: ENCH_ADD_DODGE_PERCENT
+descriptionTemplate: "+{value}% Dodge Chance"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: DODGE_CHANCE_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_ADD_GLOBAL_ACCURACY_PERCENT
+descriptionTemplate: "+{value}% Global Accuracy"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: GLOBAL_ACCURACY_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_ADD_GLOBAL_CAST_HASTE_PERCENT
+descriptionTemplate: "+{value}% Global Cast Haste"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: GLOBAL_CAST_HASTE_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_ADD_SHIELD_EFFECTIVENESS_PERCENT
+descriptionTemplate: "+{value}% Shield Effectiveness"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: SHIELD_EFFECTIVENESS_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_ADD_DEBUFF_EFFECTIVENESS_PERCENT
+descriptionTemplate: "+{value}% Debuff Effectiveness"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: DEBUFF_EFFECTIVENESS_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_ADD_GLOBAL_HEALING_EFFECTIVENESS_PERCENT
+descriptionTemplate: "+{value}% All Healing Done"
+effectType: PLAYER_SECONDARY_STAT_ADD_PERCENT
+targetKey: GLOBAL_HEALING_EFFECTIVENESS_PERCENT
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+# (PLAYER_DAMAGE_TYPE_ADD_PERCENT, TBV=15, MTV@F50=40)
+# targetKey should match DamageType enum values
+enchantID: ENCH_INCREASE_PHYSICAL_DAMAGE_PERCENT
+descriptionTemplate: "+{value}% Physical Damage"
+effectType: PLAYER_DAMAGE_TYPE_ADD_PERCENT
+targetKey: PHYSICAL
+trueBaseValue: 15
+maxTotalValueAtFloor50: 40
+---
+enchantID: ENCH_INCREASE_ARCANE_DAMAGE_PERCENT
+descriptionTemplate: "+{value}% Arcane Damage"
+effectType: PLAYER_DAMAGE_TYPE_ADD_PERCENT
+targetKey: ARCANE
+trueBaseValue: 15
+maxTotalValueAtFloor50: 40
+---
+# ... (Continue for ASTRAL, SONIC, ACID, FIRE, COLD, DARK, PSYCHIC, HOLY, LIGHTNING, ENTROPY, GENERAL damage types)
+enchantID: ENCH_INCREASE_ENTROPY_DAMAGE_PERCENT
+descriptionTemplate: "+{value}% Entropy Damage"
+effectType: PLAYER_DAMAGE_TYPE_ADD_PERCENT
+targetKey: ENTROPY
+trueBaseValue: 15
+maxTotalValueAtFloor50: 40
+---
+# (PLAYER_HEALING_TYPE_ADD_PERCENT, TBV=15, MTV@F50=40)
+# targetKey should match HealingType enum values
+enchantID: ENCH_INCREASE_CHARM_HEALING_PERCENT
+descriptionTemplate: "+{value}% Charm Healing"
+effectType: PLAYER_HEALING_TYPE_ADD_PERCENT
+targetKey: CHARM_HEALING
+trueBaseValue: 15
+maxTotalValueAtFloor50: 40
+---
+# ... (Continue for PIETY_HEALING, WISDOM_HEALING, GENERAL_HEALING)
+enchantID: ENCH_INCREASE_GENERAL_HEALING_PERCENT
+descriptionTemplate: "+{value}% General Healing"
+effectType: PLAYER_HEALING_TYPE_ADD_PERCENT
+targetKey: GENERAL_HEALING
+trueBaseValue: 15
+maxTotalValueAtFloor50: 40
+---
+# Spell-Specific Enhancements
+enchantID: ENCH_SPELL_ADD_FLAT_POTENCY
+descriptionTemplate: "+{value} to this Spell's Base Potency"
+effectType: SPELL_CORE_VALUE_ADD_FLAT
+targetKey: THIS_SPELL_POTENCY
+trueBaseValue: 1
+maxTotalValueAtFloor50: 10
+---
+enchantID: ENCH_SPELL_INCREASE_PERCENT_POTENCY
+descriptionTemplate: "+{value}% to this Spell's Effectiveness"
+effectType: SPELL_CORE_VALUE_ADD_PERCENT
+targetKey: THIS_SPELL_POTENCY
+trueBaseValue: 5
+maxTotalValueAtFloor50: 55
+---
+enchantID: ENCH_SPELL_REDUCE_COOLDOWN_PERCENT
+descriptionTemplate: "-{value}% Cooldown for this Spell"
+effectType: SPELL_COOLDOWN_REDUCE_PERCENT
+targetKey: THIS_SPELL_COOLDOWN
+trueBaseValue: 10
+maxTotalValueAtFloor50: 35
+---
+enchantID: ENCH_SPELL_ADD_FLAT_ACCURACY
+descriptionTemplate: "+{value} Accuracy Rating for this Spell"
+effectType: SPELL_ACCURACY_ADD_FLAT
+targetKey: THIS_SPELL_ACCURACY
+trueBaseValue: 3
+maxTotalValueAtFloor50: 28
+---

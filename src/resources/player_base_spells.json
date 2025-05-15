@@ -1,0 +1,335 @@
+[
+  {
+    "id": "base_hungering_arrow",
+    "name": "Hungering Arrow",
+    "scalingAttribute": "DEXTERITY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3, 
+      "damageType": "ASTRAL"
+    },
+    "cooldownRange": {"minSeconds": 4.5, "maxSeconds": 6.5},
+    "inherentProperties": {
+      "dealsDoubleDamageToShields": true, 
+      "accuracyBonus": 30 
+    }
+  },
+  {
+    "id": "base_acid_blob",
+    "name": "Acid Blob",
+    "scalingAttribute": "FORTITUDE",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 2,
+      "damageType": "ACID"
+    },
+    "cooldownRange": {"minSeconds": 2.0, "maxSeconds": 3.5},
+    "inherentProperties": {
+      "ignoresArmor": true
+    }
+  },
+  {
+    "id": "base_castigation",
+    "name": "Castigation",
+    "scalingAttribute": "PIETY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3, 
+      "damageType": "HOLY"
+    },
+    "cooldownRange": {"minSeconds": 2.5, "maxSeconds": 4.0},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_ACCURACY_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_shout",
+    "name": "Shout",
+    "scalingAttribute": "CHARM",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 5, 
+      "damageType": "SONIC"
+    },
+    "cooldownRange": {"minSeconds": 3.5, "maxSeconds": 5.0},
+    "inherentProperties": {
+      "ignoresArmor": true
+    }
+  },
+  {
+    "id": "base_protect",
+    "name": "Protect",
+    "scalingAttribute": "MIND",
+    "coreEffect": {
+      "type": "SHIELD_APPLICATION",
+      "baseValue": 2 
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.5}
+  },
+  {
+    "id": "base_spark",
+    "name": "Spark",
+    "scalingAttribute": "AGILITY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 1,
+      "damageType": "ARCANE"
+    },
+    "cooldownRange": {"minSeconds": 1.5, "maxSeconds": 3.0}
+  },
+  {
+    "id": "base_cheer",
+    "name": "Cheer",
+    "scalingAttribute": "CHARM",
+    "coreEffect": {
+      "type": "HEALING",
+      "baseValue": 4, 
+      "healingType": "CHARM_HEALING" 
+    },
+    "cooldownRange": {"minSeconds": 3.5, "maxSeconds": 5.0}
+  },
+  {
+    "id": "base_minor_heal",
+    "name": "Minor Heal",
+    "scalingAttribute": "PIETY",
+    "coreEffect": {
+      "type": "HEALING",
+      "baseValue": 3,
+      "healingType": "PIETY_HEALING"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.5}
+  },
+  {
+    "id": "base_arcane_bolt",
+    "name": "Arcane Bolt",
+    "scalingAttribute": "AGILITY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3,
+      "damageType": "ARCANE"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.5},
+    "inherentProperties": {
+      "dealsDoubleDamageToShields": true
+    }
+  },
+  {
+    "id": "base_telekinesis",
+    "name": "Telekinesis",
+    "scalingAttribute": "MIND",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 1,
+      "damageType": "PSYCHIC"
+    },
+    "cooldownRange": {"minSeconds": 1.5, "maxSeconds": 2.5},
+    "inherentProperties": {
+      "ignoresArmor": true,
+      "ignoresShield": true
+    }
+  },
+  {
+    "id": "base_balm",
+    "name": "Balm",
+    "scalingAttribute": "WISDOM",
+    "coreEffect": {
+      "type": "HEALING",
+      "baseValue": 2,
+      "healingType": "WISDOM_HEALING"
+    },
+    "cooldownRange": {"minSeconds": 2.0, "maxSeconds": 3.0}
+  },
+  {
+    "id": "base_crumble",
+    "name": "Crumble",
+    "scalingAttribute": "CUNNING",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 2,
+      "damageType": "ENTROPY"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.5},
+    "inherentProperties": {
+      "ignoresArmor": true,
+      "ignoresShield": true,
+      "alwaysHits": true
+    }
+  },
+  {
+    "id": "base_singe",
+    "name": "Singe",
+    "scalingAttribute": "INTELLECT",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3,
+      "damageType": "FIRE"
+    },
+    "cooldownRange": {"minSeconds": 2.5, "maxSeconds": 4.0}
+  },
+  {
+    "id": "base_green_brew",
+    "name": "Green Brew",
+    "scalingAttribute": "FORTITUDE",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 1,
+      "damageType": "ACID"
+    },
+    "cooldownRange": {"minSeconds": 4.0, "maxSeconds": 5.5},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_ARMOR_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_chill",
+    "name": "Chill",
+    "scalingAttribute": "INTELLECT",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 2,
+      "damageType": "COLD"
+    },
+    "cooldownRange": {"minSeconds": 2.5, "maxSeconds": 3.5},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_DODGE_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_nightfall",
+    "name": "Nightfall",
+    "scalingAttribute": "MALICE",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 7,
+      "damageType": "DARK"
+    },
+    "cooldownRange": {"minSeconds": 5.0, "maxSeconds": 7.0}
+  },
+  {
+    "id": "base_infection",
+    "name": "Infection",
+    "scalingAttribute": "CUNNING",
+    "coreEffect": {
+      "type": "APPLY_DOT",
+      "dotType": "ENTROPY_POISON", 
+      "baseValue": 1, 
+      "stacking": true,
+      "dealsNoInitialDamage": true
+    },
+    "cooldownRange": {"minSeconds": 7.0, "maxSeconds": 9.0},
+    "inherentProperties": {
+      "ignoresArmor": true,
+      "ignoresShield": true,
+      "alwaysHits": true
+    }
+  },
+  {
+    "id": "base_illusory_dagger",
+    "name": "Illusory Dagger",
+    "scalingAttribute": "DEXTERITY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3,
+      "damageType": "ASTRAL"
+    },
+    "cooldownRange": {"minSeconds": 2.0, "maxSeconds": 3.5},
+    "inherentProperties": {
+      "ignoresArmor": true 
+    }
+  },
+  {
+    "id": "base_scream",
+    "name": "Scream",
+    "scalingAttribute": "CHARM",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 6, 
+      "damageType": "SONIC"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.0},
+    "inherentProperties": {
+      "ignoresArmor": true
+    }
+  },
+  {
+    "id": "base_frost",
+    "name": "Frost",
+    "scalingAttribute": "INTELLECT",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 4, 
+      "damageType": "COLD"
+    },
+    "cooldownRange": {"minSeconds": 2.5, "maxSeconds": 3.5},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_DODGE_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_scorch",
+    "name": "Scorch",
+    "scalingAttribute": "INTELLECT",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 5, 
+      "damageType": "FIRE"
+    },
+    "cooldownRange": {"minSeconds": 2.5, "maxSeconds": 3.5},
+    "inherentProperties": {
+       "accuracyBonus": 3
+    }
+  },
+  {
+    "id": "base_weakness_rune",
+    "name": "Weakness Rune",
+    "scalingAttribute": "MALICE",
+    "coreEffect": {
+      "type": "DAMAGE", 
+      "baseValue": 2, 
+      "damageType": "DARK"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.0},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_REGEN_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_jolt",
+    "name": "Jolt",
+    "scalingAttribute": "WISDOM",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 2, 
+      "damageType": "LIGHTNING"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.5},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_DODGE_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_lightning_strike", 
+    "name": "Lightning Strike",
+    "scalingAttribute": "WISDOM",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 5, 
+      "damageType": "LIGHTNING"
+    },
+    "cooldownRange": {"minSeconds": 3.0, "maxSeconds": 4.0},
+    "inherentProperties": {
+      "onHitEffect": "REDUCE_ENEMY_DODGE_1_FLAT_STACKING"
+    }
+  },
+  {
+    "id": "base_plasma_bolt",
+    "name": "Plasma Bolt",
+    "scalingAttribute": "AGILITY",
+    "coreEffect": {
+      "type": "DAMAGE",
+      "baseValue": 3, 
+      "damageType": "ARCANE"
+    },
+    "cooldownRange": {"minSeconds": 1.5, "maxSeconds": 2.5}
+  }
+]
