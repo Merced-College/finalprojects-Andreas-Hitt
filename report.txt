@@ -1,0 +1,100 @@
+Report topics:
+
+1) What your game or app does and how it is useful or entertaining.
+2) Includes at least 3 algorithms as steps or a flowchart, and a snapshot of the algorithms code.
+3) Explains in a paragraph or 3 the algorithms that you created and how they are used in the game or 
+app. How you created them is important, and if you used ChatGPT here you can explain how you used it - ChatGPT should 
+not be able to write your algorithms in their totality.
+4) Discusses the Big O time of these algorithms.
+5) An explanation of the data structures that you used, why you chose them, and how they were used.
+6) Explains a step in the design or development process where you encountered an opportunity and how you used this.
+7) Explains a step in the design or development process where you encountered an error and how you resolved this.
+8) Explains what you would change or add in the next version of your game or app.
+
+1) The program I created for my final project is an idle-battler incremental game. The main gameplay loop of the game is 
+killing monsters to get randomly generated 'spells', which the player decides to either equip, gaining the spells 
+bonuses; or to destroy, gaining AP (Attribute points) which are spent on increasing the players base stats such as agility,
+wisdom etc. 
+
+2) The flowcharts will be attatched as their own pdf files here.
+
+3) The most important and complex algorithms in my game were the method to generate spells, and the method to apply damage to an entity. 
+Gemini assisted in generating both algorithms after I set a base level of information. In other words, I conversed with the AI, telling 
+it the things I believed needed to be considered when making this method such as applying the effect enchants, taking into consideration
+the mitigation of player stats (armor, shield), and whether or not there should be output for these methods. In the files I attatched,
+some of the methods have print methods of their own to display their operations. I was advised to not do this by the AI and instead have
+the output be handled by a different class built specifically for output, which I may do in the future but I decided against it for 
+simplicity's sake. 
+
+Figuring out the calculations for applying armor and shield required more time thinking about it than actually
+implementing it, both because figuring out how I wanted the game to play at the micro level was exhausting, and because in the end 
+the actual implementation was very simple checks and math. (some of the decisions: Deciding how exactly armor mitigates damage, which 
+stat starts mitigating damage first armor or shield, and if shields, when broken, will have the remainder of the damage 'overflow' into
+the entity's HP pool.)
+
+That was mainly the take damage method. The spell generator was the part I was most excited to work on because it will interact with 
+and affect nearly every part of the game and code in some way. I knew that I wanted the base spells + enchantments to be stored in a data file, 
+and make their attributes modifiable by random number. This made sense to me as the easiest way to load in many different spells that
+were intended to be only semi-random. Again I found the most difficult part of this method to be the small details in the implementation, 
+like what formula I would use to determine the random strength range for each spell and enchant type. I had a broad idea that, as the player 
+progressed further through the game, they would have an increasing ceiling potential for the strength of their loot drops. This ended up being 
+hardcoded into the data files where, the enchantment have a max theoretical strength at some level of the game, and when the spell
+generator was run the difference between the player's current floor and the spells maximum strength at the highest floor was calculated. This 
+number was then used as the spell and enchantment power level ceiling directly. Then, a random number is generated between the weakest possible 
+version of the spell, and the maximum possible strength of the spell for the floor it was dropped on. 
+
+Ex: Player kills an enemy on floor 25. generateSpellDrop(25) is passed. The base spells and enchantments have been loaded into lists, which are 
+each selected by random number. The strength of the spell itself (say the spell is fireball) is directly multiplied by a random number selected
+between 1 and 25. Then the number of enchantments are randomized (0-4), each enchant has their power calculated by random number, and then the
+AP value of the spell is calculated, for the case that the player wants to destroy the spell. This is decided by adding up the numeric effect of
+the base spell and each enchantment after adjusting for floor strength. Then, the AP value is multipliedd a factor based on the number of 
+enchantments using predefined constants. Afterwards, the spell object is returned and passed on to the player's inventory in other parts of the code. 
+
+I looked up how a selection sort algorithm works, then quickly slapped a method together. I then used Gemini to 'translate' it into code that 
+would work with my existing files. This function was not actually connected to any part of the code in time for my final presentation, so the 
+player cannot access it, however it is theoretically functional (no errors in console at least), and could be integrated just by adding support for 
+the method into my game interface/menu. 
+
+The big O time of takeDamage and generateSpellDrop, though likely methods that have some of the highest runtime in my program, will still be O(1)
+or constant time, because no matter what input, the method will perform the same checks and operations. generateSpellDrop may take slightly longer 
+since, because the number of enchantments are randomized, it may perform repeat operations up to 4 times (there are max 4 enchantments to operate on). 
+Again though, that is not based at all on the input. 
+
+However, selection sort, being recursive and a method that iterates through a list, will take O(n^2) because for each element in the array it will 
+iterate through the entire rest of the array in the worst case. 
+
+5) My inventory system used ArrayLists to store spell objects, because I needed to add and remove any of them at will in case the player wanted a
+certain spell, and I also needed to be able to sort the array if the player called the selection sort method. I originally planned on using a linked 
+list but the requirement of being able to handle sortinng changed my mind. 
+
+My spell and enchantment types are loaded into enums, which, in the Stats class, was loaded in to a map. This was to iteratively ensure each healingType
+and damageType enum applied all of their bonuses. Then other locations in the code could easily call 'calculated____Bonuses.getordefault(enumType, n)
+where n is the percent bonus in effectiveness the player has for that specific damage or healing type. A map was chosen to store these enum types
+because these will likely be frequently called during combat. As such it needed to be looked up quickly.
+
+I used an array to store the player's currently equipped spells, split into two arrays for active and passive spells. I chose this data structure for 
+its fixed length. The maximum amount of equipped spells does not change over the course of a game. It also allows the spells to be looked up simply by
+their index. This is simple for the player to interact with as they just need to, in the menu, say 'equip x n' where x is their chosen spell id, and n 
+is the location in the equip slots they want to slot the spell into. Later, in the game's combat loop, the active spell array is constantly iterated
+through, updating the time until a spell can be cast again, and casting any spell off cooldown. For my use case, the array needed to hold objects in order
+and retrieve them from any spot in the array, and also needs to be able to add and remove objects at will. 
+
+6) Originally I had intended to make an abstract 'entity' class which had methods to hold stats, spells, the inventory, etc. I would then make a
+'player' and an 'enemy' class which each inherited all of the methods. However, after I had already wrwitten about 100 lines of the class, I realized
+that the implementations of the player vs enemy would be so different that I may as well just make entirely seperate classes. I believe the Gemini AI 
+understood what I was trying to do with the entity class, trying to standardize methods, and wrote a 'combatant' interface class, which had just a
+handfull of methods necessary for combat. This class was used to make sure the player and enemy classes had methods which would be used in combat
+such as methods to get armor, get shields, take damage, apply Damage Over Time effects, check if the entity is alive, etc. 
+
+7) There was a point where I was attempting to sort my files into different packages due to the overwhelming number. I did not think there would be 
+any issues but changing the file pathing did end up causing numerous errors to show up in my code. (I think the count was 62 errors)
+
+I had to change some methods from private to public, make sure there were the appropriate imports in each file, and change the package name up at the
+top of each file to reflect their new location. Eclipse should have done this automatically, and I believe it did for at least a few, but not all.
+
+8) There are many things I wish to add, likely the biggest and most difficult feature being graphics. I want to add healthbars, spell cooldown bars,
+a place where most stats and bonuses are displayed. They should change instantly when an attribute is added to the player or a spell is equipped.
+There should also be a better inventory interface, where the player has images of the spells that they can hover over and see all of the effects of the
+spell at a glance. I also couldd implement the rest of the monsters, there are meant to be 50 floors with 1 dedicated monster per floor. Once the player
+defeats the 50th monster they would be given the option to 'prestige', resetting the entire game and giving them a higher ceiling on the randomn 
+strength of spells.
